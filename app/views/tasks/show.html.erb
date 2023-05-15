@@ -4,5 +4,5 @@
 
 <p><%= @task.completed? ? "This task is not completed yet" : "This task is completed"%></p>
 
-
+<%= link_to "Update this task", edit_task_path(@task.id) %>
 <%= link_to "Back to list", root_path %>
