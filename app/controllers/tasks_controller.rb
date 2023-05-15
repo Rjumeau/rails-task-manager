@@ -1,6 +1,12 @@
-class TasksController < ApplicationController
+# frozen_string_literal: true
 
+# This controller handle tasks actions
+class TasksController < ApplicationController
   def index
     @tasks = Task.all
+  end
+
+  def show
+    @task = Task.find(params[:id].to_i)
   end
 end
